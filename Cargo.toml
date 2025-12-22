@@ -1,0 +1,29 @@
+[package]
+name = "my-portfolio"
+version = "0.1.0"
+edition = "2024"
+categories = ["gui", "web-programming", "rendering", "graphics", "wasm"]
+description = "Embed an idiomatic Bevy app inside your Leptos app with ease."
+exclude = ["examples/", "tests/"]
+keywords = ["leptos", "bevy", "graphics", "wasm", "canvas"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/Synphonyte/leptos-bevy-canvas"
+
+[dependencies]
+bevy = { version = "0.17", default-features = false }
+crossbeam-channel = "0.5"
+leptos = "0.8"
+leptos-use = { version = "0.16", default-features = false, features = [
+  "use_raf_fn",
+] }
+paste = "1.0.15"
+variadics_please = "1.1.0"
+
+[dev-dependencies]
+bevy = { version = "0.17", default-features = false, features = [
+  "bevy_window",
+] }
+
+[features]
+bevy_state = ["bevy/bevy_state"]
